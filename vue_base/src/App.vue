@@ -1,19 +1,35 @@
-<template>  
-  <h3>模板语法</h3>
-  <p>{{ msg }}</p>
-  <p>{{ number + 1 }}</p>
-  <p v-html = "rawHtml"></p>
+<template>
+  <IfDemo />
+  <div v-bind:class="dynamiccla" v-bind:id="dynamicid">测试</div>
+  <button :disabled=isornot>Button</button>
+  <div v-bind="objectofattrs"> Test</div>
 </template>
 
 <script>
+import IfDemo from './components/IfDemo.vue'
 export default{
+  components:{
+    IfDemo
+  },
   data(){
     return{
-      msg:"Hello Vue3",
-      number:10,
-      rawHtml:"<a href='https://itbaizhan.com'>百战程序员</a>"
+      dynamiccla:"active",
+      dynamicid:"dynamicid",
+      isornot:false,
+      objectofattrsP:{
+        class:"appclass",
+        id:"appid"
+      }
     }
   }
 }
 </script>
 
+<style>
+
+.active{
+  color: red;
+  font-size: 20px;
+}
+
+</style>

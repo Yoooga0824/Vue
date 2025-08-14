@@ -1,5 +1,6 @@
 <template>
   <IfDemo />
+  <ListDemo />
   <div v-bind:class="dynamiccla" v-bind:id="dynamicid">测试</div>
   <button :disabled=isornot>Button</button>
   <div v-bind="objectofattrs"> Test</div>
@@ -7,9 +8,11 @@
 
 <script>
 import IfDemo from './components/IfDemo.vue'
+import ListDemo from './components/ListDemo.vue'
 export default{
   components:{
-    IfDemo
+    IfDemo,
+    ListDemo
   },
   data(){
     return{

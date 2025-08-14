@@ -6,7 +6,7 @@
 export default{
     data(){
         return {
-            names:["百战程序员", "尚学堂", "IT"],
+            names:["百战程序员", "尚学堂", "IT","学习Vue.js"],
         }
     }
 }
